@@ -3,6 +3,9 @@ FROM python:3
 
 ADD main.py .
 
-RUN pip install requests, BeautifulSoup, pandas, os
+COPY requirements.txt ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+RUN requests, BeautifulSoup, pandas, os
 
 CMD ["python", "./main.py"]
