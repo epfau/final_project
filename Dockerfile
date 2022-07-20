@@ -6,7 +6,6 @@ ADD main.py .
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install python-dotenv
-RUN requests, BeautifulSoup, pandas, os
+RUN pip install requests beautifulsoup4 pandas os python-dotenv
 
 CMD ["python", "./main.py"]
