@@ -6,6 +6,10 @@ ADD main.py .
 COPY requirements.txt ./
 
 RUN pip install --upgrade pip
+RUN requirements.txt
 RUN pip install requests beautifulsoup4 pandas python-dotenv
 
-CMD ["python", "./main.py"]
+EXPOSE 8080
+ENTRYPOINT [ "python" ]
+
+CMD ["python", "app.py", "./main.py"]
