@@ -9,8 +9,8 @@ def main():
     return message
 
 @app.route('/scrape')
-def hello():
-    return main.py
+def scrape():
+    return "scraping..."
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
